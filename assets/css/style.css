@@ -1,7 +1,3 @@
-#quiz {
-    display: none;
-}
-
-#startScreen {
-    display: block;
+.disappear {
+    display: none
 }
