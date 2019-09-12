@@ -1,6 +1,8 @@
 let timeLeft;
 let intervalId;
-let time = 10;
+let time = 5;
+var radioValue;
+var graded = false;
 
 $(document).ready(function(){
     $("#start").on("click", function(){
@@ -13,11 +15,27 @@ $(document).ready(function(){
 
 function clock() {
     intervalId = setInterval(decrement, 1000);
+
 }
 
-function decrement () {
+function decrement() {
     if (time > 0) {
-    time--;
-    $("#onscreenTimer").html(time);
+        time--;
+        $("#onscreenTimer").html(time);
+    } else {
+        grade();
     }
+}
+
+function grade() {
+    if (graded === false) {
+        radioValue = $("input[name='question1']:checked").val();
+        console.log(radioValue);
+        if (radioValue === "correct"){
+            console.log("Correct");
+        } else {
+            console.log("Incorrect");
+        }
+    }
+    graded = true;
 }
