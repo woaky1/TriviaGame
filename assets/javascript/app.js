@@ -11,7 +11,7 @@ var unansweredQuestions = 0;
 
 $(document).ready(function(){
     $("#start").on("click", function(){
-        console.log("I was clicked.");
+        // console.log("I was clicked.");
         $("#startScreen").addClass("disappear");
         $("#quiz").removeClass("disappear");
         clock();
@@ -34,10 +34,10 @@ function decrement() {
 
 function grade() {
 // Learned how to loop through and grab the checked button values from one of the answers here: https://stackoverflow.com/questions/45848618/how-to-check-the-values-of-multiple-dynamic-radio-buttons-in-a-form-using-jquery
+    
     if (graded === false) {
         $('input[type=radio]:checked').each(function() {
             userAnswers.push(this.value);
-            // console.log(userAnswers);
         });
         for(var i = 0; i < 2; i++) {
             if (userAnswers[i] === "correct") {
@@ -47,7 +47,11 @@ function grade() {
             }
         }
         unansweredQuestions = 2 - userAnswers.length;
-        console.log(numAnsweredCorrect + "/" + numAnsweredIncorrect + "/" + unansweredQuestions);
+        $("#correct_num").html(numAnsweredCorrect);
+        $("#incorrect_num").html(numAnsweredIncorrect);
+        $("#unanswered_num").html(unansweredQuestions);
+        $("#quiz").addClass("disappear");
+        $("#endScreen").removeClass("disappear");
     };
     graded = true;
 }
