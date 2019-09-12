@@ -1,6 +1,6 @@
 let timeLeft;
 let intervalId;
-let time = 5;
+let time = 120;
 var radioValue;
 var graded = false;
 var userAnswers = [];

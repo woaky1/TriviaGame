@@ -22,12 +22,12 @@
         <div id="startScreen">
             <div class="row">
                 <div class="col-md-3"></div>
-                <div class="col-md-6 border border-warning pt-3">
-                    <h2>Hail, Adventurer!</h2>
-                    <p>Test your knowledge of how spells work within the magical realms of Dungeons and Dragons.</p>
-                    <p>You have 120 seconds to complete this test.</p>
-                    <p>Good luck...</p>
-                    <button type="button" class="btn btn-warning float-right mb-3 mr-3" id="start">Start!</button>
+                <div class="col-md-6 pt-3">
+                    <h2 class="startScreenText">Hail, Adventurer!</h2>
+                    <p class="startScreenText">Test your knowledge of how spells work within the magical realms of Dungeons and Dragons.</p>
+                    <p class="startScreenText">You have 120 seconds to complete this task.</p>
+                    <p class="startScreenText">Good luck...</p>
+                    <button type="button" class="btn btn-warning float-right mb-3 mr-3 startScreenText" id="start">Start!</button>
                 </div>
                 <div class="col-md-3"></div>
             </div>
@@ -36,7 +36,7 @@
             <div class="row">
                 <div class="col-md-4"></div>
                 <div class="col-md-4">
-                    <h3>Time Remaining: <span id="onscreenTimer">10</span></h3>
+                    <h3>Time Remaining: <span id="onscreenTimer">120</span></h3>
                 </div>
                 <div class="col-md-4"></div>
             </div>
@@ -44,7 +44,7 @@
                 <div class="col-md-2"></div>
                 <div class="col-md-8">
                     <h2 class="text-center" id="q1">What school of magic does the spell "Burning Hands" belong to?</h2>
-                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <div class="btn-group btn-group-toggle offset-md-2 mt-2 mb-3" data-toggle="buttons">
                         <label class="btn btn-secondary">
                             <input type="radio" name="question1" autocomplete="off" value="incorrect"> Necromancy
                         </label>
@@ -113,6 +113,7 @@
             </div>
         </div>
     </div>
+
 
 
 
