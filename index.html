@@ -13,47 +13,78 @@
 <body>
     <header>
         <div id="gameTitle">
-                <h1 class="text-center">Wizard Quiz</h1>
+                <h1 class="text-center">Magic User Quiz</h1>
         </div>
     </header>
 
     <div class="container">
         <div id="startScreen">
-            <button type="button" class="btn btn-danger" id="start">Start</button>
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6 border border-danger">
+                    <h2>Hail, Adventurer!</h2>
+                    <p>Test your knowledge of how spells work within the magical realms of Dungeons and Dragons.</p>
+                    <p>You have 120 seconds to complete it.</p>
+                    <p>Good luck...</p>
+                    <button type="button" class="btn btn-danger float-right" id="start">Start!</button>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
         </div>
         <div class="disappear" id="quiz">
             <div class="row">
-                <div class="col-md-2"></div>
-                <div class="col-md8">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
                     <h3>Time Remaining: <span id="onscreenTimer">10</span></h3>
-                    <h2 class="text-center" id="q1">What school of magic does the spell <em>Burning Hands</em> belong to?</h2>
-                    <div class="btn-group btn-group-toggle" data-toggle="buttons" id="q1">
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <h2 class="text-center" id="q1">What school of magic does the spell "Burning Hands" belong to?</h2>
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
                         <label class="btn btn-secondary">
-                            <input type="radio" name="question1" id="option1" autocomplete="off" value="incorrect"> Necromancy
+                            <input type="radio" name="question1" autocomplete="off" value="incorrect"> Necromancy
                         </label>
                         <label class="btn btn-secondary">
-                            <input type="radio" name="question1" id="option2" autocomplete="off" value="correct"> Evocation
+                            <input type="radio" name="question1" autocomplete="off" value="correct"> Evocation
                         </label>
                         <label class="btn btn-secondary">
-                            <input type="radio" name="question1" id="option3" autocomplete="off" value="incorrect"> Conjuration
+                            <input type="radio" name="question1" autocomplete="off" value="incorrect"> Conjuration
                         </label>
                         <label class="btn btn-secondary">
-                            <input type="radio" name="question1" id="option4" autocomplete="off" value="incorrect"> Enchantment
+                            <input type="radio" name="question1" autocomplete="off" value="incorrect"> Enchantment
                         </label>
                     </div>
-                    <h2 class="text-center" id="q2">What school of magic does the spell <em>Burning Hands</em> belong to?</h2>
-                    <div class="btn-group btn-group-toggle" data-toggle="buttons" id="q1">
+                    <h2 class="text-center" id="q2">Which of these spells can a ranger NOT cast?</h2>
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
                         <label class="btn btn-secondary">
-                            <input type="radio" name="question2" id="option1" autocomplete="off" value="incorrect"> Necromancy
+                            <input type="radio" name="question2" autocomplete="off" value="incorrect"> Wind Wall
                         </label>
                         <label class="btn btn-secondary">
-                            <input type="radio" name="question2" id="option2" autocomplete="off" value="correct"> Evocation
+                            <input type="radio" name="question2" autocomplete="off" value="incorrect"> Silence
                         </label>
                         <label class="btn btn-secondary">
-                            <input type="radio" name="question2" id="option3" autocomplete="off" value="incorrect"> Conjuration
+                            <input type="radio" name="question2" autocomplete="off" value="correct"> Meld Into Stone
                         </label>
                         <label class="btn btn-secondary">
-                            <input type="radio" name="question2" id="option4" autocomplete="off" value="incorrect"> Enchantment
+                            <input type="radio" name="question2" autocomplete="off" value="incorrect"> Nondetection
+                        </label>
+                    </div>
+                    <h2 class="text-center" id="q3">What is the duration for the spell "Haste?"</h2>
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="question3" autocomplete="off" value="incorrect"> 1 round
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="question3" autocomplete="off" value="incorrect"> 1 hour
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="question3" autocomplete="off" value="incorrect"> Until your next rest
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="question3" autocomplete="off" value="correct"> 1 minute
                         </label>
                     </div>
                 </div>
@@ -71,7 +102,7 @@
         <div class="disappear" id="endScreen">
             <div class="row">
                 <div class="col-md-3"></div>
-                <div class="col-md-6">
+                <div class="col-md-6 text-center">
                     <h2>All Done!</h2>
                     <h3>Correct Answers: <span id="correct_num"></span></h3>
                     <h3>Incorrect Answers: <span id="incorrect_num"></span></h3>

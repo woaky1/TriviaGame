@@ -8,6 +8,7 @@ var correctAnswers = []
 var numAnsweredCorrect = 0;
 var numAnsweredIncorrect = 0;
 var unansweredQuestions = 0;
+var numberOfQuestions = 10;
 
 $(document).ready(function(){
     $("#start").on("click", function(){
@@ -39,14 +40,14 @@ function grade() {
         $('input[type=radio]:checked').each(function() {
             userAnswers.push(this.value);
         });
-        for(var i = 0; i < 2; i++) {
+        for(var i = 0; i < numberOfQuestions; i++) {
             if (userAnswers[i] === "correct") {
                 numAnsweredCorrect++;
             } else if (userAnswers[i] === "incorrect") {
                 numAnsweredIncorrect++;
             }
         }
-        unansweredQuestions = 2 - userAnswers.length;
+        unansweredQuestions = numberOfQuestions - userAnswers.length;
         $("#correct_num").html(numAnsweredCorrect);
         $("#incorrect_num").html(numAnsweredIncorrect);
         $("#unanswered_num").html(unansweredQuestions);
