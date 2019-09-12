@@ -55,3 +55,8 @@ function grade() {
     };
     graded = true;
 }
+
+$("#gradeMe").on("click", function(){
+    time = 0;
+    grade();
+})
