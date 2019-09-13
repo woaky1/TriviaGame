@@ -1,3 +1,4 @@
+/* We use the class below to control what screen of the quiz the user sees */
 .disappear {
     display: none
 }

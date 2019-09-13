@@ -1,10 +1,7 @@
-let timeLeft;
 let intervalId;
 let time = 120;
-var radioValue;
 var graded = false;
 var userAnswers = [];
-var correctAnswers = []
 var numAnsweredCorrect = 0;
 var numAnsweredIncorrect = 0;
 var unansweredQuestions = 0;
@@ -19,11 +16,13 @@ $(document).ready(function(){
     });
 });
 
+// This sets up our timer.
 function clock() {
     intervalId = setInterval(decrement, 1000);
 
 }
 
+// This makes the timer count down.
 function decrement() {
     if (time > 0) {
         time--;
@@ -57,6 +56,7 @@ function grade() {
     graded = true;
 }
 
+// This code is for the "I'm Done" button the user can use if they complete the quiz early.
 $("#gradeMe").on("click", function(){
     time = 0;
     grade();
