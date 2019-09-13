@@ -24,7 +24,7 @@
                 <div class="col-md-3"></div>
                 <div class="col-md-6 pt-3">
                     <h2 class="startScreenText">Hail, Adventurer!</h2>
-                    <p class="startScreenText">Test your knowledge of how spells work within the magical realms of Dungeons and Dragons.</p>
+                    <p class="startScreenText">Test your knowledge of how spells work within Dungeons and Dragons.</p>
                     <p class="startScreenText">You have 120 seconds to complete this task.</p>
                     <p class="startScreenText">Good luck...</p>
                     <button type="button" class="btn btn-warning float-right mb-3 mr-3 startScreenText" id="start">Start!</button>
@@ -34,17 +34,14 @@
         </div>
         <div class="disappear" id="quiz">
             <div class="row">
-                <div class="col-md-4"></div>
-                <div class="col-md-4">
+                <div class="col-md-12 text-center">
                     <h3>Time Remaining: <span id="onscreenTimer">120</span></h3>
                 </div>
-                <div class="col-md-4"></div>
             </div>
             <div class="row">
-                <div class="col-md-2"></div>
-                <div class="col-md-8">
-                    <h2 class="text-center" id="q1">What school of magic does the spell "Burning Hands" belong to?</h2>
-                    <div class="btn-group btn-group-toggle offset-md-2 mt-2 mb-3" data-toggle="buttons">
+                <div class="col-md-12 text-center">
+                    <h2 class="text-center" id="q1">What school of magic does the spell <span class="red">Burning Hands</span> belong to?</h2>
+                    <div class="btn-group btn-group-toggle mb-3" data-toggle="buttons">
                         <label class="btn btn-secondary">
                             <input type="radio" name="question1" autocomplete="off" value="incorrect"> Necromancy
                         </label>
@@ -58,8 +55,8 @@
                             <input type="radio" name="question1" autocomplete="off" value="incorrect"> Enchantment
                         </label>
                     </div>
-                    <h2 class="text-center" id="q2">Which of these spells can a ranger NOT cast?</h2>
-                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <h2 class="text-center" id="q2">Which of these spells can a ranger <span class="red">not</span> cast?</h2>
+                    <div class="btn-group btn-group-toggle mb-3" data-toggle="buttons">
                         <label class="btn btn-secondary">
                             <input type="radio" name="question2" autocomplete="off" value="incorrect"> Wind Wall
                         </label>
@@ -73,8 +70,8 @@
                             <input type="radio" name="question2" autocomplete="off" value="incorrect"> Nondetection
                         </label>
                     </div>
-                    <h2 class="text-center" id="q3">What is the duration for the spell "Haste?"</h2>
-                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <h2 class="text-center" id="q3">What is the duration for the spell <span class="red">Haste</span>?</h2>
+                    <div class="btn-group btn-group-toggle mb-3" data-toggle="buttons">
                         <label class="btn btn-secondary">
                             <input type="radio" name="question3" autocomplete="off" value="incorrect"> 1 round
                         </label>
@@ -89,14 +86,11 @@
                         </label>
                     </div>
                 </div>
-                <div class="col-md-2"></div>
             </div>
             <div class="row">
-                <div class="col-md-5"></div>
-                <div class="col-md-2">
+                <div class="col-md-12 text-center">
                     <button type="button" class="btn btn-primary" id="gradeMe">I'm done!</button>
                 </div>
-                <div class="col-md-5"></div>
             </div>
             
         </div>
